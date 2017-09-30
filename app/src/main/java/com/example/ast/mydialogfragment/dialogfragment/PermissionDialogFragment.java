@@ -22,6 +22,7 @@ import com.example.simplebutton.utils.ColorUtil;
 import com.example.simplebutton.utils.DrawableUtil;
 
 /**
+ * 申请权限dialog
  * Created by xiaoniu on 2017/9/27.
  */
 
@@ -45,12 +46,6 @@ public class PermissionDialogFragment extends DialogFragment implements View.OnC
 //        //window外可以点击,不拦截窗口外的事件
 //        getDialog().getWindow().addFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);
 
-        Window dialogWindow = getDialog().getWindow();
-        dialogWindow.setGravity(Gravity.CENTER);
-        WindowManager.LayoutParams lp = dialogWindow.getAttributes();
-        DisplayMetrics displayMetrics = getContext().getResources().getDisplayMetrics();
-        lp.height = (int) (displayMetrics.heightPixels * 0.8f);
-        dialogWindow.setAttributes(lp);
     }
 
     @Nullable
@@ -72,24 +67,7 @@ public class PermissionDialogFragment extends DialogFragment implements View.OnC
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        initTheme();
         initEvents();
-    }
-
-
-    /**
-     * 初始化主题色
-     */
-    private void initTheme() {
-    }
-
-    /**
-     * 设置
-     *
-     * @param color    主色
-     * @param topResId 图片
-     */
-    private void setDialogTheme(int color, int topResId) {
     }
 
     private void initEvents() {

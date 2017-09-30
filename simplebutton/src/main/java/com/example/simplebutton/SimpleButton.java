@@ -12,22 +12,26 @@ import com.example.simplebutton.utils.ColorUtil;
 import com.example.simplebutton.utils.DrawableUtil;
 
 /**
+ * 简单好看的自定义Button
  * Created by xiaoniu on 2017/9/26.
  */
 
 public class SimpleButton extends Button {
 
     private static final String TAG = SimpleButton.class.getSimpleName();
-
+    //样式：有normal，stroke，solid三种
     private int style;
+    //颜色
     private int color;
+    //边框宽
     private int strokeWidth;
+    //圆角半径
     private int cornerRadius;
 
     final int STYLE_NORMAL = 0;
     final int STYLE_STROKE = 1;
     final int STYLE_SOLID = 2;
-
+    //默认颜色蓝色
     final int DEF_COLOR = Color.parseColor("#3f51b5");
 
     public SimpleButton(Context context) {
@@ -64,17 +68,26 @@ public class SimpleButton extends Button {
         }
     }
 
+    /**
+     * 设置正常样式
+     */
     private void setStyleNormal() {
         Log.i(TAG, "setStyleNormal");
         setBackgroundDrawable(DrawableUtil.getDrawable(cornerRadius, color));
     }
 
+    /**
+     * 空心样式
+     */
     private void setStyleStroke() {
         Log.i(TAG, "setStyleStroke");
         setBackgroundDrawable(DrawableUtil.getStrokeSolidDrawable(cornerRadius, strokeWidth, color, Color.WHITE));
         setTextColor(ColorUtil.getColorStateList(Color.WHITE, color));
     }
 
+    /**
+     * 实心样式
+     */
     private void setStyleSolid() {
         Log.i(TAG, "setStyleSolid");
         setBackgroundDrawable(DrawableUtil.getSolidStrokeDrawable(cornerRadius, strokeWidth, Color.WHITE, color));

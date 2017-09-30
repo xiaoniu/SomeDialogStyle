@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import com.example.ast.mydialogfragment.R;
 
 /**
+ * 上面两个角为圆角，下面两个角为直角的矩形图片
  * Created by AST on 2017/9/28.
  */
 
@@ -51,6 +52,7 @@ public class RoundConerImageView extends ImageView {
         canvas.drawRect(0,source.getHeight()-45,source.getWidth(),source.getHeight(),paint);
         //取图片的交集
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+        //绘制图片
         canvas.drawBitmap(source, 0, 0, paint);
         return target;
     }

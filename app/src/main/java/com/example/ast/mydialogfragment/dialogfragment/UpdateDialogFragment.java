@@ -22,28 +22,27 @@ import com.example.simplebutton.utils.ColorUtil;
 import com.example.simplebutton.utils.DrawableUtil;
 
 /**
- * Created by xiaoniu
+ * 版本更新Dialog
+ * Created by xiaoniu on 2017/9/27.
  */
 
 public class UpdateDialogFragment extends DialogFragment implements View.OnClickListener {
     private static final String TAG = "UpdateDialogFragment";
-
-    private TextView mTitleTextView;
-    private TextView mContentTextView;
+    //更新按钮
     private Button mUpdateOkButton;
-    private LinearLayout mLlClose;
+    //关闭diaolog
     private ImageView mIvClose;
     //默认色
     private int mDefaultColor = 0xffe94339;
+    //顶部图片
     private int mDefaultPicResId = R.mipmap.lib_update_app_top_bg;
     private ImageView mTopIv;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setStyle(DialogFragment.STYLE_NO_TITLE | DialogFragment.STYLE_NO_FRAME, 0);
+        //去除Dialog的矩形背景
         setStyle(DialogFragment.STYLE_NO_TITLE, R.style.AppDialog);
-        Log.i(TAG, "onCreate");
     }
 
     @Override
@@ -57,6 +56,7 @@ public class UpdateDialogFragment extends DialogFragment implements View.OnClick
 //        //window外可以点击,不拦截窗口外的事件
 //        getDialog().getWindow().addFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);
 
+        //设置Dialog高度为页面高度的80%
         Window dialogWindow = getDialog().getWindow();
         dialogWindow.setGravity(Gravity.CENTER);
         WindowManager.LayoutParams lp = dialogWindow.getAttributes();
@@ -68,29 +68,18 @@ public class UpdateDialogFragment extends DialogFragment implements View.OnClick
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Log.i(TAG, "onCreateView");
         return inflater.inflate(R.layout.lib_update_app_dialog, container);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Log.i(TAG, "onViewCreated");
         initView(view);
     }
 
     private void initView(View view) {
-        //提示内容
-        mContentTextView = (TextView) view.findViewById(R.id.tv_update_info);
-        //标题
-        mTitleTextView = (TextView) view.findViewById(R.id.tv_title);
-        //更新按钮
         mUpdateOkButton = (Button) view.findViewById(R.id.btn_ok);
-        //关闭按钮
         mIvClose = (ImageView) view.findViewById(R.id.iv_close);
-        //关闭按钮+线 的整个布局
-        mLlClose = (LinearLayout) view.findViewById(R.id.ll_close);
-        //顶部图片
         mTopIv = (ImageView) view.findViewById(R.id.iv_top);
 
     }
@@ -98,7 +87,6 @@ public class UpdateDialogFragment extends DialogFragment implements View.OnClick
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Log.i(TAG, "onActivityCreated");
         initTheme();
         initEvents();
     }

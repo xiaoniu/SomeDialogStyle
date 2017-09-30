@@ -3,18 +3,15 @@ package com.example.ast.mydialogfragment.dialogfragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
-import android.util.DisplayMetrics;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 
 import com.example.ast.mydialogfragment.R;
 import com.example.simplebutton.SimpleButton;
 
 /**
+ * 礼品活动Dialog
  * Created by xiaoniu on 2017/9/27.
  */
 
@@ -25,6 +22,7 @@ public class GiftDialogFragment extends DialogFragment implements View.OnClickLi
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //去除Dialog的矩形背景
         setStyle(DialogFragment.STYLE_NO_TITLE, R.style.AppDialog);
     }
 
@@ -33,17 +31,6 @@ public class GiftDialogFragment extends DialogFragment implements View.OnClickLi
         super.onStart();
         //点击window外的区域 是否消失
         getDialog().setCanceledOnTouchOutside(false);
-        //是否可以取消,会影响上面那条属性
-//        setCancelable(false);
-//        //window外可以点击,不拦截窗口外的事件
-//        getDialog().getWindow().addFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);
-
-        Window dialogWindow = getDialog().getWindow();
-        dialogWindow.setGravity(Gravity.CENTER);
-        WindowManager.LayoutParams lp = dialogWindow.getAttributes();
-        DisplayMetrics displayMetrics = getContext().getResources().getDisplayMetrics();
-        lp.height = (int) (displayMetrics.heightPixels * 0.8f);
-        dialogWindow.setAttributes(lp);
     }
 
     @Nullable
@@ -65,24 +52,7 @@ public class GiftDialogFragment extends DialogFragment implements View.OnClickLi
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        initTheme();
         initEvents();
-    }
-
-
-    /**
-     * 初始化主题色
-     */
-    private void initTheme() {
-    }
-
-    /**
-     * 设置
-     *
-     * @param color    主色
-     * @param topResId 图片
-     */
-    private void setDialogTheme(int color, int topResId) {
     }
 
     private void initEvents() {
