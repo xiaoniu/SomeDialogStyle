@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SimpleButton">
+        <attr name="style" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="stroke" value="1" />
+            <enum name="solid" value="2" />
+        </attr>
+        <attr name="color" format="color" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="cornerRadius" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,17 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.idea/
+app/libs/
+gradle.properties
+gradle/wrapper/gradle-wrapper.jar
+gradlew
+gradlew.bat
+simplebutton/libs/
+simplebutton/src/main/res/drawable/

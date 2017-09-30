@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:simple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.example.ast.mydialogfragment.others.RoundConerImageView
+                android:id="@+id/iv_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/empower_camera" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/iv_top"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/ic_highlight_off_black_36dp" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_top"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/lib_permission_app_info_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="36dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="需要开放以下权限："
+                android:textSize="18sp" />
+
+            <com.example.simplebutton.SimpleButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="相机权限"
+                android:textSize="18sp"
+                simple:cornerRadius="24dp"
+                simple:strokeWidth="1dp"
+                simple:color="@color/faceU"
+                simple:style="stroke" />
+
+            <com.example.simplebutton.SimpleButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="麦克风权限"
+                android:textSize="18sp"
+                simple:cornerRadius="24dp"
+                simple:color="@color/faceU"
+                simple:strokeWidth="1dp"
+                simple:style="stroke" />
+
+            <com.example.simplebutton.SimpleButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="通知权限"
+                android:textSize="18sp"
+                simple:cornerRadius="24dp"
+                simple:color="@color/faceU"
+                simple:strokeWidth="1dp"
+                simple:style="stroke" />
+
+            <com.example.simplebutton.SimpleButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="一键开启"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                simple:cornerRadius="24dp"
+                simple:color="@color/faceU"
+                simple:strokeWidth="1dp"
+                simple:style="normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

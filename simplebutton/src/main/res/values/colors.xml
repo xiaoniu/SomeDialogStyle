@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--Material Colors-->
+    <color name="materialColorRed">#f44336</color>
+    <color name="materialColorPink">#e91e63</color>
+    <color name="materialColorPurple">#9c27b0</color>
+    <color name="materialColorDeepPurple">#673ab7</color>
+    <color name="materialColorIndigo">#3f51b5</color>
+    <color name="materialColorBlue">#2196f3</color>
+    <color name="materialColorLightBlue">#03a9f4</color>
+    <color name="materialColorCyan">#00bcd4</color>
+    <color name="materialColorTeal">#009688</color>
+    <color name="materialColorGreen">#4caf50</color>
+    <color name="materialColorLightGreen">#8bc34a</color>
+    <color name="materialColorLime">#cddc39</color>
+    <color name="materialColorYellow">#FFeb3b</color>
+    <color name="materialColorAmber">#FFc107</color>
+    <color name="materialColorOrange">#FF9800</color>
+    <color name="materialColorDeepOrange">#FF5722</color>
+    <color name="materialColorBrown">#795548</color>
+    <color name="materialColorGrey">#9e9e9e</color>
+    <color name="materialColorBlueGrey">#607d8b</color>
+    <!--Text Colors-->
+    <color name="primaryText">#212121</color>
+    <color name="secondaryText">#757575</color>
+    <color name="dividerColor">#bdbdbd</color>
+
+</resources>
